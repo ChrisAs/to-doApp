@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>jQuery To Do List App</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+</head>
+<style>
+  #error {
+    display: none;
+    background: rgba(228, 77, 72, 0.5);
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+
+  ul li {
+    cursor: move;
+  }
+
+  li {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr;
+  }
+
+  ul a {
+    grid-column: span 1 / -1;
+    align-self: center;
+    text-align: right;
+    color: #e44d48;
+  }
+
+  li span.toDoItem span {
+    display: inline-block;
+    width: 35px;
+    height: 30px;
+    position: relative;
+    top: 5px;
+}
+</style>
+<body>
+
+  <div class="container">
+    <h1>jQuery To Do List App</h1>
+    <form>
+      <label for="item">Add an item:</label>
+      <input class="" type="text" id="item" placeholder="Do JavaScript homework...">
+      <input type="submit" value="Add Item">
+    </form>
+    <div id="error" class="alert alert-danger">Input field cannot be left empty!</div>
+    <ul>
+      <!-- To do items get added dynamically here -->
+    </ul>
+  </div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+<script src="todo.js"></script>
+</body>
+</html>
